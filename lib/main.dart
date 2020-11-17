@@ -2,11 +2,11 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 main() => runApp(
-  Directionality(
-    textDirection: TextDirection.ltr,
-    child: MyApp(),
-  ),
-);
+      Directionality(
+        textDirection: TextDirection.ltr,
+        child: MyApp(),
+      ),
+    );
 
 class MyApp extends StatefulWidget {
   @override
@@ -21,24 +21,18 @@ class MainPageState extends State<MyApp> {
     return Stack(
       children: <Widget>[
         Container(
-        color: currentColor,
-        child: Container(
-            child: GestureDetector(
+            color: currentColor,
+            child: Container(child: GestureDetector(
               onTap: () {
                 setState(() {
                   currentColor = BackgroundColor().getRandomColor();
                 });
               },
-            )
-        )
-    ),
+            ))),
         Container(
           child: Center(
             child: Text("Hey there!",
-                style: TextStyle(
-                    fontSize: 50,
-                    color: Colors.black)
-            ),
+                style: TextStyle(fontSize: 50, color: Colors.black)),
           ),
         ),
       ],
